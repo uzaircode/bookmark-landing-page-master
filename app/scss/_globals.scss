@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 html {
+  font-size: 100%;
   box-sizing: border-box;
 }
 
@@ -9,6 +10,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -16,4 +18,40 @@ body {
   font-family: $ff-primary;
   font-size: $fz-global;
   font-weight: $fw-regular;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
 }
