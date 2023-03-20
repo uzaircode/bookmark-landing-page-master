@@ -1,0 +1,53 @@
+.header {
+  nav {
+    // padding: 3rem 10.6875rem;
+    padding-top: 3rem;
+
+    @include breakpoint-down(medium) {
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  &__toggle {
+    > span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background-color: $bg-primary-clr-1;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      color: $clr-neutral-2;
+      text-transform: uppercase;
+      font-size: 0.8125rem;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+      &:hover {
+        color: $clr-hover;
+      }
+
+      &:last-child {
+        padding: 0.75rem 2.125rem;
+        border-radius: 5px;
+        color: white;
+        background-color: $bg-primary-clr-2;
+        // text-shadow:
+
+        &:hover {
+          padding: 0.75rem 2.125rem;
+          border: 2.5px solid $bg-primary-clr-2;
+          color: $bg-primary-clr-2;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
