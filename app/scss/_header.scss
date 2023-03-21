@@ -6,6 +6,9 @@
     @include breakpoint-down(medium) {
       padding: 2.5rem 2rem;
     }
+
+    @include breakpoint-up(large) {
+    }
   }
 
   &__toggle {
