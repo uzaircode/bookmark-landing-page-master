@@ -1,0 +1,75 @@
+.hero {
+  .container {
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    padding: 2rem 3rem;
+
+    @include breakpoint-up(large) {
+      flex: 2;
+      text-align: left;
+      padding: 0;
+    }
+
+    h1 {
+      @include breakpoint-up(large) {
+        font-size: 3rem;
+      }
+    }
+    p {
+      color: $clr-neutral-1;
+      font-size: 0.9375rem;
+
+      @include breakpoint-up(large) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-image: url('/images/illustration-hero.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 27rem;
+
+    @include breakpoint-up(large) {
+      flex: 2;
+      left: 9%;
+    }
+
+    &::before {
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      // z-index: -1;
+      height: 12.6875rem;
+      width: 10rem;
+      // top: 80px;
+      background-color: $bg-primary-clr-1;
+      // border-radius: 500px;
+      border-top-left-radius: 50em;
+      border-bottom-left-radius: 50em;
+      border-top-right-radius: 10em;
+      border-bottom-right-radius: 10em;
+
+      @include breakpoint-up(large) {
+        height: 22rem;
+        width: 35.5rem;
+        right: -26%;
+        bottom: -14%;
+        z-index: -1;
+        // transform: translateX(50%);
+      }
+    }
+  }
+}
