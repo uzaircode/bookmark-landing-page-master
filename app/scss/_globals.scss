@@ -3,6 +3,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -14,10 +15,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.3;
+  line-height: 1.45;
   font-family: $ff-primary;
   font-size: $fz-global;
   font-weight: $fw-regular;
+  overflow-x: hidden;
 }
 
 a,
@@ -27,8 +29,13 @@ a:hover {
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 69.375rem;
   margin: 0 auto;
+
+  &--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .flex {
