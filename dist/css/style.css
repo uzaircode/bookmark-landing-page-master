@@ -2,6 +2,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -13,10 +14,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.3;
+  line-height: 1.45;
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 a,
@@ -26,8 +28,12 @@ a:hover {
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 69.375rem;
   margin: 0 auto;
+}
+.container--py {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .flex {
@@ -94,4 +100,71 @@ a:hover {
   border: 2.5px solid hsl(0, 94%, 66%);
   color: hsl(0, 94%, 66%);
   background-color: white;
+}
+
+@media (min-width: 64em) {
+  .hero .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+.hero__text {
+  text-align: center;
+  padding: 2rem 3rem;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 2;
+    text-align: left;
+    padding: 0;
+  }
+}
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3rem;
+  }
+}
+.hero__text p {
+  color: hsl(229, 8%, 60%);
+  font-size: 0.9375rem;
+}
+@media (min-width: 64em) {
+  .hero__text p {
+    font-size: 1.125rem;
+  }
+}
+.hero__image {
+  position: relative;
+  background-image: url("/images/illustration-hero.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 27rem;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 2;
+    left: 9%;
+  }
+}
+.hero__image::after {
+  content: "";
+  position: absolute;
+  height: 12.6875rem;
+  width: 10rem;
+  background-color: hsl(231, 69%, 60%);
+  border-top-left-radius: 50em;
+  border-bottom-left-radius: 50em;
+  border-top-right-radius: 10em;
+  border-bottom-right-radius: 10em;
+}
+@media (min-width: 64em) {
+  .hero__image::after {
+    height: 22rem;
+    width: 35.5rem;
+    right: -26%;
+    bottom: -14%;
+    z-index: -1;
+  }
 }/*# sourceMappingURL=style.css.map */
