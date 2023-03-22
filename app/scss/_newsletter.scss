@@ -1,0 +1,70 @@
+.newsletter {
+  background-color: $bg-primary-clr-1;
+  min-height: 22.5rem;
+  color: white;
+  padding: 3.75rem 1.875rem;
+
+  @include breakpoint-up(large) {
+  }
+
+  &__info {
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      height: 14.25rem;
+      width: 27.625rem;
+      margin: 0 auto;
+      //   padding: 0 1.0938rem;
+    }
+  }
+
+  &__text {
+    h3 {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.2888rem;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
+
+      @include breakpoint-up(large) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__form {
+    input {
+      height: 3rem;
+      border-radius: 5px;
+      border-style: none;
+
+      &:first-child {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        padding: 10px;
+
+        @include breakpoint-up(large) {
+          width: 64%;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        background-color: $bg-primary-clr-2;
+        color: white;
+
+        @include breakpoint-up(large) {
+          width: 30%;
+        }
+      }
+    }
+
+    &::placeholder {
+      color: hsla(229, 31%, 21%, 0.25);
+      opacity: 1;
+    }
+  }
+}
