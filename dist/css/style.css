@@ -21,11 +21,21 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3 {
+  margin-top: 0px;
+}
+
 a,
 a:visited,
 a:hover {
   text-decoration: none;
   color: white;
+}
+
+button {
+  font-family: "Rubik", sans-serif;
 }
 
 .container {
@@ -173,6 +183,82 @@ a:hover {
     bottom: -14%;
     z-index: -1;
   }
+}
+
+.accordion {
+  text-align: center;
+  margin-bottom: 3.6875rem;
+  padding: 0rem 2rem;
+}
+@media (min-width: 64em) {
+  .accordion {
+    padding: 0;
+    width: 29.75rem;
+    margin: 2rem auto;
+  }
+}
+.accordion h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.accordion p {
+  color: hsl(229, 31%, 21%);
+  opacity: 0.5;
+  font-size: 0.9375rem;
+  margin-bottom: 4rem;
+}
+.accordion__item {
+  padding-top: 1rem;
+  border-bottom: 1px solid hsla(229, 31%, 21%, 0.15);
+}
+.accordion__item h2 {
+  margin-bottom: 0rem;
+}
+.accordion__question {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+}
+.accordion__question::after {
+  content: "";
+  display: block;
+  width: 1.125rem;
+  height: 0.75rem;
+  background-image: url("/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 300ms ease-in-out;
+}
+.accordion__question, .accordion__question:focus-visible {
+  border: none;
+  cursor: pointer;
+}
+.accordion__question.open::after {
+  content: "";
+  transform: rotate(180deg);
+}
+.accordion__content {
+  font-size: 0.9375rem;
+  opacity: 0.75;
+  text-align: left;
+  padding: 1.625rem 0rem;
+}
+.accordion__collapse.collapse {
+  display: none;
+}
+.accordion__collapse.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease;
+}
+.accordion__collapse.open {
+  display: block;
 }
 
 .newsletter {
