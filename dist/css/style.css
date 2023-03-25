@@ -80,6 +80,11 @@ button {
 .header nav {
   padding-top: 3rem;
 }
+.header nav img {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 @media (max-width: 63.9375em) {
   .header nav {
     padding: 2.5rem 2rem;
@@ -347,6 +352,14 @@ button {
 .footer__logo {
   display: inline-block;
   margin-bottom: 2.4375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__logo img {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (min-width: 64em) {
   .footer__logo {

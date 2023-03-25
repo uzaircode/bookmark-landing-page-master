@@ -20,6 +20,14 @@
   &__logo {
     display: inline-block;
     margin-bottom: 2.4375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: fit-content;
+    }
 
     @include breakpoint-up(large) {
       margin-bottom: 0rem;
