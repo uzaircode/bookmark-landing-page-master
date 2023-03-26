@@ -47,13 +47,14 @@
         border-radius: 5px;
         color: white;
         background-color: $bg-primary-clr-2;
-        // text-shadow:
+        border: 2.5px solid transparent;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
-          padding: 0.75rem 2.125rem;
           border: 2.5px solid $bg-primary-clr-2;
           color: $bg-primary-clr-2;
           background-color: white;
+          transition: border 0.4s ease-in-out;
         }
       }
     }
