@@ -24,8 +24,20 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin-top: 0px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: $clr-neutral-2;
+}
+
+p {
+  color: $clr-neutral-1;
+  font-size: 0.9375rem;
 }
 
 a,
@@ -35,8 +47,22 @@ a:hover {
   color: white;
 }
 
-button {
+.button {
   font-family: $ff-primary;
+  padding: 1rem 2.3125rem;
+  background-color: $bg-primary-clr-1;
+  border-radius: 0.3125rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 2.5px solid transparent;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    border: 2.5px solid $bg-primary-clr-1;
+    color: $bg-primary-clr-1;
+    background-color: white;
+    transition: border 0.4s ease-in-out;
+  }
 }
 
 .container {
@@ -50,8 +76,8 @@ button {
 }
 
 .page-padding {
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .flex {
