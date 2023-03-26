@@ -23,9 +23,6 @@
       }
     }
     p {
-      color: $clr-neutral-1;
-      font-size: 0.9375rem;
-
       @include breakpoint-up(large) {
         font-size: 1.125rem;
       }
